@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const CustomerList = () => {
   const [customerList, setCustomerList] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:3333/view-customer-list").then(function (response) {
+    Axios.get("https://spextrustapi.herokuapp.com/view-customer-list").then(function (response) {
       setCustomerList(response.data);
     });
   }, []);

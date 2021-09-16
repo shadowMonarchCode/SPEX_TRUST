@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const TransactionHistory = () => {
   const [history, setHistory] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:3333/view-history").then(function (response) {
+    Axios.get("https://spextrustapi.herokuapp.com/view-history").then(function (response) {
       setHistory(response.data);
     });
   }, []);

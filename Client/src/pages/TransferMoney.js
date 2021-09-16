@@ -29,7 +29,7 @@ const TransferMoney = () => {
     event.preventDefault();
     axios({
       method: "post",
-      url: "http://localhost:3333/transfer-money",
+      url: "https://spextrustapi.herokuapp.com/transfer-money",
       data: data,
     }).then((res) => {
       setInfo(res.data);
@@ -79,7 +79,7 @@ const TransferMoney = () => {
           }}
           onBlur={(event) => {
             axios
-              .get("http://localhost:3333/check-username/" + event.target.value)
+              .get("https://spextrustapi.herokuapp.com/check-username/" + event.target.value)
               .then((res) => {
                 setSenderNameExist(res.data);
               });
@@ -106,7 +106,7 @@ const TransferMoney = () => {
           }}
           onBlur={(event) => {
             axios
-              .get("http://localhost:3333/check-username/" + event.target.value)
+              .get("https://spextrustapi.herokuapp.com/check-username/" + event.target.value)
               .then((res) => {
                 setRecipientNameExist(res.data);
               });
